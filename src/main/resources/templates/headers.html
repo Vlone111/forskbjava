@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP Headers</title>
+</head>
+<body>
+<h1>Список заголовков запроса:</h1>
+<ul>
+    <li th:each="headerEntry : ${headers}">
+        <strong th:text="${headerEntry.key}">Header Name</strong>:
+        <span th:text="${headerEntry.value}">Header Value</span>
+    </li>
+</ul>
+</body>
+</html>
