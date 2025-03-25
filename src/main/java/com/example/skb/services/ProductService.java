@@ -16,7 +16,6 @@ public class ProductService {
     public Product setId(RequestDto requestDto) {
         Product product = modelToRequestDto.toProduct(requestDto);
         product.setId(UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE);
-        System.out.println(product.toString());
         return product;
     }
 }

@@ -23,8 +23,6 @@ public class JsonController {
     public ResponseEntity<ResponseDto> setid(@RequestBody RequestDto requestDto) {
         Product product = productService.setId(requestDto);
         ResponseDto responseDto = modelToResponseDto.toResponseDto(product);
-        System.out.println(product.toString());
-        System.out.println(responseDto.toString());
         return ResponseEntity.ok(modelToResponseDto.toResponseDto(productService.setId(requestDto)));
     }
 }
